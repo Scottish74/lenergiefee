@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci — L'énergie Fée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #7F77DD;
+      --purple-dark: #3C3489;
+      --purple-deep: #26215C;
+      --purple-light: #EEEDFE;
+      --purple-soft: #CECBF6;
+      --pink: #D4537E;
+      --gold: #BA7517;
+      --text-dark: #26215C;
+      --text-soft: #6b6890;
+      --text-muted: #9896b0;
+    }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: linear-gradient(145deg, #EEEDFE 0%, #F7EEF9 40%, #FBEAF0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: var(--text-dark);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--purple-soft);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '✦';
+      position: absolute;
+      top: 1.2rem; left: 1.5rem;
+      font-size: 11px;
+      color: var(--purple-soft);
+      animation: twinkle 3s infinite;
+    }
+    .card::after {
+      content: '✦ ✦';
+      position: absolute;
+      bottom: 1.2rem; right: 1.5rem;
+      font-size: 10px;
+      color: var(--purple-soft);
+      letter-spacing: 0.4em;
+      animation: twinkle 4s infinite 1s;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .logo {
+      height: 52px;
+      width: auto;
+      margin: 0 auto 1.5rem;
+    }
+
+    .icon-wrap {
+      width: 72px;
+      height: 72px;
+      background: var(--purple-light);
+      border-radius: 50%;
+      margin: 0 auto 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+    h1 em { color: var(--purple); font-style: italic; }
+
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      color: var(--pink);
+      font-style: italic;
+      margin-bottom: 1.4rem;
+    }
+
+    .divider {
+      color: var(--purple-soft);
+      letter-spacing: 0.5em;
+      font-size: 13px;
+      margin-bottom: 1.4rem;
+    }
+
+    .message {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .highlight {
+      background: var(--purple-light);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin: 0 0 1.5rem;
+      font-size: 14px;
+      color: var(--purple-dark);
+      line-height: 1.7;
+    }
+    .highlight strong {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--purple);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 12px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: var(--purple-dark); transform: translateY(-1px); }
+
+    .tagline {
+      margin-top: 1.5rem;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.14em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo_fee_transparent.png" alt="L'énergie Fée" class="logo">
+
+    <div class="icon-wrap" aria-hidden="true">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 8 C14 8 8 16 8 24 C8 34 18 42 24 44 C30 42 40 34 40 24 C40 16 34 8 24 8Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/>
+        <path d="M17 24 L22 29 L31 19" stroke="#7F77DD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="36" cy="10" r="1.5" fill="#AFA9EC"/>
+        <circle cx="40" cy="16" r="1" fill="#CECBF6"/>
+        <circle cx="11" cy="12" r="1" fill="#AFA9EC"/>
+      </svg>
+    </div>
+
+    <h1>Merci pour<br>ton <em>message</em></h1>
+    <p class="subtitle">Nadège Pina</p>
+    <div class="divider">✦ ✦ ✦</div>
+
+    <p class="message">
+      Ton message est bien arrivé jusqu'à moi ✦<br>
+      Je te recontacte très vite pour qu'on<br>puisse se retrouver.
+    </p>
+
+    <div class="highlight">
+      <strong>Besoin d'une réponse rapide ?</strong>
+      Tu peux aussi m'appeler directement au<br>
+      <a href="tel:0675204777" style="color:var(--purple);text-decoration:none;font-weight:500">06 75 20 47 77</a>
+    </div>
+
+    <a href="/" class="btn">Retourner au site</a>
+    <p class="tagline">Douceur · Écoute · Bienveillance</p>
+  </div>
+</body>
+</html>
