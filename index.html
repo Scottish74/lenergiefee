@@ -934,6 +934,186 @@
       letter-spacing: 0.05em;
       margin-top: 2px;
     }
+
+    /* ── SOINS À DISTANCE ── */
+    .distance-section {
+      padding: 4.5rem 1.5rem;
+      background: var(--white);
+    }
+
+    .distance-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3.5rem;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .distance-text h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .distance-text h2 em {
+      color: var(--purple);
+      font-style: italic;
+    }
+
+    .distance-intro {
+      font-size: 15px;
+      color: var(--text-dark);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .distance-body {
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+    }
+
+    .distance-details {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .distance-detail-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+
+    .distance-detail-icon {
+      color: var(--purple);
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .distance-detail-item strong { color: var(--purple-dark); }
+
+    .distance-forfait {
+      background: var(--purple-light);
+      border-left: 3px solid var(--purple-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 0.9rem 1.1rem;
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .distance-payment {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .distance-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: sticky;
+      top: 90px;
+    }
+
+    .distance-card {
+      background: var(--purple-light);
+      border: 1px solid var(--purple-soft);
+      border-radius: var(--radius);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .distance-card-highlight {
+      background: var(--purple);
+      border-color: var(--purple);
+      color: #fff;
+    }
+
+    .distance-card-highlight h3,
+    .distance-card-highlight p { color: rgba(255,255,255,0.85); }
+
+    .distance-card-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--pink);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: var(--radius-pill);
+    }
+
+    .distance-card-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .distance-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      color: var(--purple-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .distance-price {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--purple-dark);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .distance-card-highlight .distance-price { color: #fff; }
+    .distance-card-highlight h3 { color: #fff; }
+
+    .distance-price span { font-size: 20px; }
+
+    .distance-card p {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 768px) {
+      .distance-inner {
+        grid-template-columns: 1fr;
+      }
+      .distance-visual {
+        position: static;
+        flex-direction: row;
+      }
+      .distance-card { flex: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .distance-visual { flex-direction: column; }
+    }
+
+
+    .footer-mention {
+      font-size: 10px;
+      opacity: 0.4;
+      max-width: 500px;
+      margin: 0.6rem auto 0;
+      line-height: 1.6;
+      font-style: italic;
+    }
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -977,6 +1157,7 @@
   <a href="#soins" onclick="closeMobile()">Mes soins</a>
   <a href="#pour-qui" onclick="closeMobile()">Pour qui ?</a>
   <a href="#tarifs" onclick="closeMobile()">Tarifs</a>
+  <a href="#distance" onclick="closeMobile()">À distance</a>
   <a href="#a-propos" onclick="closeMobile()">À propos</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
   <a href="#contact" onclick="closeMobile()" style="background:var(--purple);color:#fff;padding:12px 32px;border-radius:50px;font-family:'Jost',sans-serif;font-size:16px;margin-top:1rem">Rendez-vous</a>
@@ -993,6 +1174,7 @@
         <li><a href="#soins">Mes soins</a></li>
         <li><a href="#pour-qui">Pour qui ?</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#distance">À distance</a></li>
         <li><a href="#a-propos">À propos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1166,6 +1348,254 @@
   </div>
 </section>
 
+<!-- SOINS À DISTANCE -->
+<section class="distance-section" id="distance" aria-labelledby="distance-title">
+  <div class="container">
+    <div class="distance-inner reveal">
+      <div class="distance-text">
+        <span class="section-label">Soins à distance</span>
+        <h2 id="distance-title">Un accompagnement<br><em>où que vous soyez</em></h2>
+        <p class="distance-intro">Un temps de bien-être et de rééquilibrage énergétique, réalisé à distance, pour vous accompagner dans les périodes de stress, de fatigue émotionnelle, de questionnements ou simplement lorsque vous ressentez le besoin de retrouver davantage de sérénité intérieure.</p>
+        <p class="distance-body">Pendant la séance, vous êtes confortablement installé(e) chez vous, dans un endroit calme. Vous n'avez rien à faire, simplement vous autoriser ce moment pour vous.</p>
+        <p class="distance-body">Chaque accompagnement est suivi d'un temps d'échange afin de partager les ressentis et de répondre à vos éventuelles questions.</p>
+        <div class="distance-details">
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Durée : environ 45 à 60 minutes</span>
+          </div>
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Séance individuelle : <strong>50 €</strong></span>
+          </div>
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Forfait 3 séances : <strong>120 €</strong> <em style="font-size:12px;color:var(--text-soft)">(soit 40 €/séance)</em></span>
+          </div>
+        </div>
+        <div class="distance-forfait">
+          Parce que certaines évolutions demandent du temps et de la régularité, le forfait 3 séances permet d'inscrire l'accompagnement dans une démarche plus profonde et plus durable.
+        </div>
+        <p class="distance-payment">Règlement par virement ou Wero avant la séance.</p>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1.5rem;text-decoration:none" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Réserver une séance à distance</a>
+      </div>
+      <div class="distance-visual reveal">
+        <div class="distance-card">
+          <div class="distance-card-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="18" stroke="#7F77DD" stroke-width="1.8"/>
+              <path d="M24 6 C24 6 20 12 20 18 C20 22 22 24 24 24 C26 24 28 22 28 18 C28 12 24 6 24 6Z" fill="#CECBF6"/>
+              <path d="M6 24 C6 24 12 20 18 20 C22 20 24 22 24 24 C24 26 22 28 18 28 C12 28 6 24 6 24Z" fill="#CECBF6" opacity="0.6"/>
+              <path d="M42 24 C42 24 36 28 30 28 C26 28 24 26 24 24 C24 22 26 20 30 20 C36 20 42 24 42 24Z" fill="#CECBF6" opacity="0.6"/>
+              <circle cx="24" cy="24" r="3" fill="#7F77DD"/>
+              <circle cx="36" cy="12" r="1.5" fill="#AFA9EC"/>
+              <circle cx="12" cy="12" r="1.5" fill="#AFA9EC"/>
+              <circle cx="36" cy="36" r="1.5" fill="#AFA9EC"/>
+              <circle cx="12" cy="36" r="1.5" fill="#AFA9EC"/>
+            </svg>
+          </div>
+          <h3>Séance individuelle</h3>
+          <div class="distance-price">50 <span>€</span></div>
+          <p>~45 à 60 minutes</p>
+        </div>
+        <div class="distance-card distance-card-highlight">
+          <div class="distance-card-badge">Recommandé</div>
+          <div class="distance-card-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 4 L28 16 L40 16 L30 24 L34 36 L24 28 L14 36 L18 24 L8 16 L20 16 Z" stroke="#fff" stroke-width="1.5" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+          </div>
+          <h3>Forfait 3 séances</h3>
+          <div class="distance-price">120 <span>€</span></div>
+          <p>soit 40 €/séance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-header reveal">
+      <span class="section-label">Me contacter</span>
+      <h2 id="contact-title">Prendre rendez-vous</h2>
+    </div>
+    <div class="contact-body reveal">
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13.5 19.79 19.79 0 0 1 1 4.82 2 2 0 0 1 2.98 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <div>
+          <div class="contact-label">Téléphone</div>
+          <div class="contact-val"><a href="tel:0675204777">06 75 20 47 77</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val"><a href="mailto:feelenergie71@gmail.com">feelenergie71@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <div>
+          <div class="contact-label">Cabinet</div>
+          <div class="contact-val">Marcilly-lès-Buxy, 71390</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        <div>
+          <div class="contact-label">Facebook</div>
+          <div class="contact-val"><a href="https://www.facebook.com/feelenergie71" target="_blank" rel="noopener">L'énergie Fée</a></div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" action="https://formspree.io/f/xjgdgjvw" method="POST" novalidate>
+      <input type="hidden" name="_next" value="https://lenergiefee.fr/merci.html">
+      <div class="form-row">
+        <input type="text" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+        <input type="tel" name="telephone" placeholder="Téléphone" autocomplete="tel">
+      </div>
+      <input type="email" name="email" placeholder="Votre email" required autocomplete="email" style="margin-bottom:10px">
+      <select name="soin" style="margin-bottom:10px">
+        <option value="" disabled selected>Quel soin vous intéresse ?</option>
+        <option>Massage métamorphique</option>
+        <option>Reiki / Lahochi</option>
+        <option>Accompagnement émotionnel</option>
+        <option>Psychogénéalogie</option>
+        <option>Soin à distance</option>
+        <option>Autre / Je ne sais pas encore</option>
+      </select>
+      <textarea name="message" placeholder="Votre message ou question…" required></textarea>
+      <button type="submit" class="form-submit">Envoyer le message</button>
+      <p class="form-mention">Vos données sont utilisées uniquement pour répondre à votre demande.</p>
+    <div class="google-avis reveal">
+      <p class="google-avis-label">Vous avez vécu une séance avec Nadège ?</p>
+      <a href="https://share.google/OVjhF5RV6WYAJVuW9" target="_blank" rel="noopener" class="btn-google-avis">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Laisser un avis Google
+      </a>
+    </div>
+
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+
+<!-- TARIFS -->
+<section class="tarifs" id="tarifs" aria-labelledby="tarifs-title">
+  <div class="container">
+    <div class="tarifs-header reveal">
+      <span class="section-label">Tarifs</span>
+      <h2 id="tarifs-title">Transparence &amp; accessibilité</h2>
+    </div>
+    <div class="tarifs-grid">
+      <div class="tarif-card reveal">
+        <div class="tarif-cat">Adultes &amp; adolescents</div>
+        <div class="tarif-price">60€ <small>1re séance</small></div>
+        <div class="tarif-detail">puis 50€/séance en suivi<br>Psychogénéalogie · Reiki · Lahochi<br>Accompagnement stress &amp; anxiété</div>
+      </div>
+      <div class="tarif-card reveal">
+        <div class="tarif-cat">Enfants <small style="text-transform:none;letter-spacing:0">(jusqu'à 13 ans)</small></div>
+        <div class="tarif-price">50€ <small>1re séance</small></div>
+        <div class="tarif-detail">puis 40€/séance en suivi<br>3 à 8 séances en moyenne<br>Massage métamorphique &amp; exercices doux</div>
+      </div>
+      <div class="tarif-card reveal">
+        <div class="tarif-cat">Séniors</div>
+        <div class="tarif-price">40€ <small>/séance</small></div>
+        <div class="tarif-detail">À domicile ou en EHPAD<br>Déplacement sur Marcilly-lès-Buxy<br>et alentours</div>
+        <span class="tarif-badge">Déplacement inclus</span>
+      </div>
+    </div>
+    <p class="tarif-note">Paiement par espèces ou virement bancaire · Chaque accompagnement est sur-mesure</p>
+  </div>
+</section>
+
+<!-- SOINS À DISTANCE -->
+<section class="distance-section" id="distance" aria-labelledby="distance-title">
+  <div class="container">
+    <div class="distance-inner reveal">
+      <div class="distance-text">
+        <span class="section-label">Soins à distance</span>
+        <h2 id="distance-title">Un accompagnement<br><em>où que vous soyez</em></h2>
+        <p class="distance-intro">Un temps de bien-être et de rééquilibrage énergétique, réalisé à distance, pour vous accompagner dans les périodes de stress, de fatigue émotionnelle, de questionnements ou simplement lorsque vous ressentez le besoin de retrouver davantage de sérénité intérieure.</p>
+        <p class="distance-body">Pendant la séance, vous êtes confortablement installé(e) chez vous, dans un endroit calme. Vous n'avez rien à faire, simplement vous autoriser ce moment pour vous.</p>
+        <p class="distance-body">Chaque accompagnement est suivi d'un temps d'échange afin de partager les ressentis et de répondre à vos éventuelles questions.</p>
+        <div class="distance-details">
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Durée : environ 45 à 60 minutes</span>
+          </div>
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Séance individuelle : <strong>50 €</strong></span>
+          </div>
+          <div class="distance-detail-item">
+            <span class="distance-detail-icon" aria-hidden="true">✦</span>
+            <span>Forfait 3 séances : <strong>120 €</strong> <em style="font-size:12px;color:var(--text-soft)">(soit 40 €/séance)</em></span>
+          </div>
+        </div>
+        <div class="distance-forfait">
+          Parce que certaines évolutions demandent du temps et de la régularité, le forfait 3 séances permet d'inscrire l'accompagnement dans une démarche plus profonde et plus durable.
+        </div>
+        <p class="distance-payment">Règlement par virement ou Wero avant la séance.</p>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1.5rem;text-decoration:none" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Réserver une séance à distance</a>
+      </div>
+      <div class="distance-visual reveal">
+        <div class="distance-card">
+          <div class="distance-card-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="18" stroke="#7F77DD" stroke-width="1.8"/>
+              <path d="M24 6 C24 6 20 12 20 18 C20 22 22 24 24 24 C26 24 28 22 28 18 C28 12 24 6 24 6Z" fill="#CECBF6"/>
+              <path d="M6 24 C6 24 12 20 18 20 C22 20 24 22 24 24 C24 26 22 28 18 28 C12 28 6 24 6 24Z" fill="#CECBF6" opacity="0.6"/>
+              <path d="M42 24 C42 24 36 28 30 28 C26 28 24 26 24 24 C24 22 26 20 30 20 C36 20 42 24 42 24Z" fill="#CECBF6" opacity="0.6"/>
+              <circle cx="24" cy="24" r="3" fill="#7F77DD"/>
+              <circle cx="36" cy="12" r="1.5" fill="#AFA9EC"/>
+              <circle cx="12" cy="12" r="1.5" fill="#AFA9EC"/>
+              <circle cx="36" cy="36" r="1.5" fill="#AFA9EC"/>
+              <circle cx="12" cy="36" r="1.5" fill="#AFA9EC"/>
+            </svg>
+          </div>
+          <h3>Séance individuelle</h3>
+          <div class="distance-price">50 <span>€</span></div>
+          <p>~45 à 60 minutes</p>
+        </div>
+        <div class="distance-card distance-card-highlight">
+          <div class="distance-card-badge">Recommandé</div>
+          <div class="distance-card-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 4 L28 16 L40 16 L30 24 L34 36 L24 28 L14 36 L18 24 L8 16 L20 16 Z" stroke="#fff" stroke-width="1.5" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+          </div>
+          <h3>Forfait 3 séances</h3>
+          <div class="distance-price">120 <span>€</span></div>
+          <p>soit 40 €/séance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- CONTACT -->
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="container">
@@ -1295,6 +1725,7 @@
     <a href="#mentions">Mentions légales</a>
   </div>
   <div class="footer-copy">© 2025 Nadège Pina · L'énergie Fée · Marcilly-lès-Buxy</div>
+  <p class="footer-mention">Les accompagnements proposés s'inscrivent dans une démarche de bien-être et ne se substituent en aucun cas à un avis ou à un traitement médical.</p>
 </footer>
 
 <script>
