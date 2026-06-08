@@ -50,7 +50,7 @@
       color: var(--text-dark);
       font-size: 16px;
       line-height: 1.7;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     img { max-width: 100%; height: auto; display: block; }
@@ -125,7 +125,7 @@
       letter-spacing: 0.06em;
       color: var(--text-soft);
       transition: color 0.2s;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .nav-links a:hover { color: var(--purple); }
@@ -262,7 +262,7 @@
       font-size: 15px;
       color: var(--text-soft);
       margin-bottom: 0.3rem;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .hero-name {
@@ -356,7 +356,7 @@
       line-height: 1.8;
       max-width: 600px;
       margin: 0 auto;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     /* ── DISTANCE BANNER ── */
@@ -387,7 +387,7 @@
     .distance-banner p {
       font-size: 13px;
       opacity: 0.85;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     /* ── SERVICES ── */
@@ -405,7 +405,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.2rem;
       max-width: 1000px;
       margin: 0 auto;
@@ -444,15 +444,16 @@
       font-size: 13px;
       color: var(--text-soft);
       line-height: 1.6;
-      font-weight: 300;
+      font-weight: 400;
     }
+
 
     /* ── PUBLIC ── */
     .public {
       padding: 3.5rem 1.5rem;
-      background: var(--pink-light);
-      border-top: 1px solid var(--pink-soft);
-      border-bottom: 1px solid var(--pink-soft);
+      background: var(--purple-light);
+      border-top: 1px solid var(--purple-soft);
+      border-bottom: 1px solid var(--purple-soft);
     }
 
     .public-header {
@@ -463,34 +464,47 @@
     .public-header h2 { font-size: clamp(26px, 4vw, 38px); color: var(--text-dark); }
 
     .public-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      max-width: 700px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    .public-pill {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .public-card {
       background: var(--white);
-      border: 1px solid var(--pink-soft);
-      border-radius: var(--radius-pill);
-      padding: 10px 20px;
-      font-size: 14px;
-      color: var(--text-dark);
-      font-weight: 300;
+      border: 1px solid var(--purple-soft);
+      border-radius: var(--radius);
+      padding: 1.3rem 1rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .public-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--pink);
-      flex-shrink: 0;
+    .public-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 20px rgba(127,119,221,0.12);
     }
+
+    .public-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .public-name {
+      font-size: 13px;
+      color: var(--purple-dark);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .public-detail {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
 
     /* ── TARIFS ── */
     .tarifs {
@@ -507,7 +521,7 @@
 
     .tarifs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.2rem;
       max-width: 800px;
       margin: 0 auto 1.5rem;
@@ -546,7 +560,7 @@
     }
 
     .tarif-detail {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-soft);
       margin-top: 0.5rem;
       line-height: 1.6;
@@ -567,7 +581,7 @@
     .tarif-note {
       text-align: center;
       font-size: 13px;
-      color: var(--text-muted);
+      color: var(--text-soft);
       font-style: italic;
       margin-top: 1.5rem;
     }
@@ -617,7 +631,7 @@
     .contact-val {
       font-size: 14px;
       color: var(--text-dark);
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .contact-val a { color: var(--purple); }
@@ -643,7 +657,7 @@
       border-radius: var(--radius-sm);
       font-family: 'Jost', sans-serif;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 400;
       background: var(--bg);
       color: var(--text-dark);
       transition: border-color 0.2s;
@@ -731,6 +745,188 @@
       opacity: 0.4;
     }
 
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .service-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    @media (min-width: 769px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .service-card-inner {
+        display: flex;
+        gap: 1.4rem;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .service-img {
+        width: 140px;
+        height: 160px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+      .service-icon {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ── QUI SUIS-JE ── */
+    .quisuisje {
+      padding: 4.5rem 1.5rem;
+      background: linear-gradient(160deg, #FBEAF0 0%, #faf9ff 60%);
+      border-top: 1px solid var(--pink-soft);
+      border-bottom: 1px solid var(--pink-soft);
+    }
+
+    .quisuisje-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .quisuisje-photo-wrap {
+      position: sticky;
+      top: 90px;
+      text-align: center;
+    }
+
+    .quisuisje-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 0 2px var(--purple-soft);
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    .quisuisje-badge {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .quisuisje-badge span {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    .quisuisje-text h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .quisuisje-intro p {
+      font-size: 15px;
+      color: var(--text-soft);
+      line-height: 1.85;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .quisuisje-intro em, .quisuisje-closing em {
+      color: var(--purple);
+      font-style: italic;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.1em;
+    }
+
+    .quisuisje-quote {
+      border-left: 3px solid var(--pink-soft);
+      padding: 0.8rem 1.2rem;
+      margin: 1.5rem 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.7;
+      font-weight: 400;
+      background: rgba(255,255,255,0.6);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .quisuisje-closing {
+      font-size: 15px;
+      color: var(--text-soft);
+      line-height: 1.85;
+      font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+      .quisuisje-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .quisuisje-photo-wrap {
+        position: static;
+      }
+      .quisuisje-photo {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+
+    .google-avis {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--purple-light);
+    }
+    .google-avis-label {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .btn-google-avis {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--text-dark);
+      font-family: "Jost", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 11px 24px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--purple-soft);
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .btn-google-avis:hover {
+      border-color: var(--purple);
+      box-shadow: 0 2px 12px rgba(127,119,221,0.15);
+      transform: translateY(-1px);
+    }
+
+    .service-title small {
+      display: block;
+      font-size: 12px;
+      color: var(--text-soft);
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -774,6 +970,7 @@
   <a href="#soins" onclick="closeMobile()">Mes soins</a>
   <a href="#pour-qui" onclick="closeMobile()">Pour qui ?</a>
   <a href="#tarifs" onclick="closeMobile()">Tarifs</a>
+  <a href="#a-propos" onclick="closeMobile()">À propos</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
   <a href="#contact" onclick="closeMobile()" style="background:var(--purple);color:#fff;padding:12px 32px;border-radius:50px;font-family:'Jost',sans-serif;font-size:16px;margin-top:1rem">Rendez-vous</a>
 </div>
@@ -789,6 +986,7 @@
         <li><a href="#soins">Mes soins</a></li>
         <li><a href="#pour-qui">Pour qui ?</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#a-propos">À propos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -855,24 +1053,34 @@
     </div>
     <div class="services-grid">
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 24c0 6.627-5.373 12-12 12S12 30.627 12 24c0-3.5 1.5-6.65 3.9-8.85" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M24 12c1.5 0 3 .28 4.35.78" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M38 18c.65 1.85 1 3.88 1 6" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><path d="M24 6 L25.2 9.6 L29 9.6 L26 11.8 L27.2 15.4 L24 13.2 L20.8 15.4 L22 11.8 L19 9.6 L22.8 9.6 Z" fill="#7F77DD" opacity="0.7"/><circle cx="36" cy="10" r="1.5" fill="#AFA9EC"/><circle cx="40" cy="16" r="1" fill="#CECBF6"/><circle cx="12" cy="14" r="1" fill="#AFA9EC"/></svg></span>
-        <h3 class="service-title">Massage métamorphique</h3>
-        <p class="service-desc">Un toucher léger et non intrusif sur les pieds, mains et tête. Il libère les tensions, favorise l'apaisement et un sentiment de calme intérieur.</p>
+        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 24c0 6.627-5.373 12-12 12S12 30.627 12 24c0-3.5 1.5-6.65 3.9-8.85" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M24 12c1.5 0 3 .28 4.35.78" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><path d="M24 6 L25.2 9.6 L29 9.6 L26 11.8 L27.2 15.4 L24 13.2 L20.8 15.4 L22 11.8 L19 9.6 L22.8 9.6 Z" fill="#7F77DD" opacity="0.7"/><circle cx="36" cy="10" r="1.5" fill="#AFA9EC"/><circle cx="12" cy="14" r="1" fill="#AFA9EC"/></svg></span>
+        <h3 class="service-title">Massage métamorphique<br><small>pour enfants</small></h3>
+        <p class="service-desc">Massage très doux des pieds, des mains et de la tête permettant à l'enfant de relâcher certaines tensions et de retrouver plus de calme intérieur.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 38 C24 38 12 30 12 20 C12 14.477 17.373 10 24 10 C30.627 10 36 14.477 36 20 C36 30 24 38 24 38Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><circle cx="24" cy="25" r="2" fill="#7F77DD"/></svg></span>
+        <h3 class="service-title">Accompagnement<br><small>des enfants sensibles</small></h3>
+        <p class="service-desc">Accompagnement des enfants qui ressentent fortement leurs émotions (hypersensibilité, anxiété, difficultés d'endormissement) pour retrouver sécurité intérieure et confiance.</p>
       </article>
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" stroke="#7F77DD" stroke-width="1.8"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><line x1="24" y1="8" x2="24" y2="11" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="37" x2="24" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="24" x2="11" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="37" y1="24" x2="40" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="13" y1="13" x2="15.1" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="32.9" y1="32.9" x2="35" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="35" y1="13" x2="32.9" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="15.1" y1="32.9" x2="13" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-        <h3 class="service-title">Reiki &amp; Lahochi</h3>
-        <p class="service-desc">Énergie universelle qui rééquilibre le corps et l'esprit. Favorise le bien-être global, la détente profonde et le retour à l'harmonie intérieure.</p>
+        <h3 class="service-title">Séance Reiki</h3>
+        <p class="service-desc">Soin énergétique favorisant détente profonde, relâchement du stress et harmonisation du corps et des émotions.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 38 C24 38 12 30 12 20 C12 14.477 17.373 10 24 10 C30.627 10 36 14.477 36 20 C36 30 24 38 24 38Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><path d="M24 18 C24 18 20 22 20 25 C20 27.2 21.8 29 24 29 C26.2 29 28 27.2 28 25 C28 22 24 18 24 18Z" fill="#CECBF6"/><circle cx="24" cy="25" r="2" fill="#7F77DD"/><path d="M18 16 Q24 13 30 16" stroke="#AFA9EC" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg></span>
-        <h3 class="service-title">Accompagnement émotionnel</h3>
-        <p class="service-desc">Écoute, soutien et outils personnalisés pour mieux comprendre et libérer vos émotions, et avancer sereinement dans votre quotidien.</p>
-      </article>
-      <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="12" r="3.5" stroke="#7F77DD" stroke-width="1.8"/><line x1="24" y1="15.5" x2="24" y2="22" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="16" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="32" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="13" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><circle cx="35" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><line x1="13" y1="36" x2="11" y2="42" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="36" x2="15" y2="42" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="35" y1="36" x2="33" y2="42" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="35" y1="36" x2="37" y2="42" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="22" x2="24" y2="31" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="12" r="3.5" stroke="#7F77DD" stroke-width="1.8"/><line x1="24" y1="15.5" x2="24" y2="22" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="16" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="32" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="13" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><circle cx="35" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><line x1="24" y1="22" x2="24" y2="31" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></span>
         <h3 class="service-title">Psychogénéalogie</h3>
-        <p class="service-desc">Explorer votre histoire familiale pour mettre en lumière les mémoires et liens transgénérationnels qui influencent encore votre vie, et s'en libérer.</p>
+        <p class="service-desc">Accompagnement permettant d'explorer les liens entre l'histoire familiale et certaines difficultés émotionnelles ou schémas répétitifs.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 24 Q14 16 20 24 Q26 32 32 24 Q38 16 44 24" stroke="#7F77DD" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8 32 Q14 24 20 32 Q26 40 32 32 Q38 24 44 32" stroke="#AFA9EC" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="14" r="2" fill="#CECBF6"/></svg></span>
+        <h3 class="service-title">Stress &amp; anxiété<br><small>adolescents et adultes</small></h3>
+        <p class="service-desc">Accompagnement visant à apaiser le stress et les tensions émotionnelles grâce à une approche douce qui passe par le corps — massage métamorphique et soins énergétiques.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="13" r="5" stroke="#7F77DD" stroke-width="1.8"/><path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="40" x2="28" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><path d="M30 30 Q36 28 38 34" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>
+        <h3 class="service-title">Massage métamorphique<br><small>pour séniors</small></h3>
+        <p class="service-desc">Massage très doux favorisant détente, apaisement et bien-être. Présence, douceur et réconfort dans le respect du rythme de chacun. Intervention à domicile et en EHPAD.</p>
       </article>
     </div>
   </div>
@@ -885,15 +1093,39 @@
   <div class="container">
     <div class="public-header reveal">
       <span class="section-label">Pour qui ?</span>
-      <h2 id="public-title">Enfants, adolescents &amp; adultes</h2>
+      <h2 id="public-title">Un accompagnement pour chacun</h2>
     </div>
-    <div class="public-grid reveal" role="list">
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Enfants sensibles &amp; anxieux</div>
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Adolescents</div>
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Adultes &amp; parents stressés</div>
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Femmes enceintes</div>
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Séniors (domicile &amp; EHPAD)</div>
-      <div class="public-pill" role="listitem"><span class="public-dot" aria-hidden="true"></span>Personnes hypersensibles</div>
+    <div class="public-grid reveal">
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="12" r="6" stroke="#7F77DD" stroke-width="1.8"/><path d="M12 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M16 28 Q12 32 14 36" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M32 28 Q36 32 34 36" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></div>
+        <div class="public-name">Enfants</div>
+        <div class="public-detail">dès le plus jeune âge</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><path d="M24 8 C16 8 10 15 10 22 C10 32 24 42 24 42 C24 42 38 32 38 22 C38 15 32 8 24 8Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><circle cx="24" cy="22" r="5" stroke="#7F77DD" stroke-width="1.5"/><circle cx="24" cy="22" r="2" fill="#CECBF6"/></svg></div>
+        <div class="public-name">Enfants sensibles</div>
+        <div class="public-detail">hypersensibilité, anxiété</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M14 38c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M24 17 L24 24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><path d="M18 21 L24 24 L30 21" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="public-name">Adolescents</div>
+        <div class="public-detail">stress, émotions</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M13 38c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M20 20 L16 26 L20 26" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M28 20 L32 26 L28 26" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+        <div class="public-name">Adultes</div>
+        <div class="public-detail">accompagnement sur-mesure</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="22" cy="11" r="5" stroke="#7F77DD" stroke-width="1.8"/><path d="M16 22 Q14 30 16 36 Q20 42 26 40 Q34 38 34 30 Q34 22 28 20 Q24 18 16 22Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><circle cx="26" cy="30" r="3" fill="#CECBF6"/></svg></div>
+        <div class="public-name">Femmes enceintes</div>
+        <div class="public-detail">douceur &amp; présence</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M13 38c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M30 28 Q38 26 38 34" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" fill="none"/><line x1="36" y1="34" x2="36" y2="40" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="public-name">Séniors</div>
+        <div class="public-detail">domicile &amp; EHPAD</div>
+      </div>
     </div>
   </div>
 </section>
@@ -994,12 +1226,56 @@
       <textarea name="message" placeholder="Votre message ou question…" required></textarea>
       <button type="submit" class="form-submit">Envoyer le message</button>
       <p class="form-mention">Vos données sont utilisées uniquement pour répondre à votre demande.</p>
+    <div class="google-avis reveal">
+      <p class="google-avis-label">Vous avez vécu une séance avec Nadège ?</p>
+      <a href="https://share.google/OVjhF5RV6WYAJVuW9" target="_blank" rel="noopener" class="btn-google-avis">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Laisser un avis Google
+      </a>
+    </div>
+
     </form>
   </div>
 </section>
 </main>
 
 <!-- FOOTER -->
+
+<!-- QUI SUIS-JE -->
+<section class="quisuisje" id="a-propos" aria-labelledby="quisuisje-title">
+  <div class="container">
+    <div class="quisuisje-inner reveal">
+      <div class="quisuisje-photo-wrap">
+        <img src="nadege_photo.jpg" alt="Nadège Pina — L'énergie Fée" class="quisuisje-photo">
+        <div class="quisuisje-badge">
+          <span>Douceur</span>
+          <span>Écoute</span>
+          <span>Bienveillance</span>
+        </div>
+      </div>
+      <div class="quisuisje-text">
+        <span class="section-label">À propos</span>
+        <h2 id="quisuisje-title">Qui suis-je ?</h2>
+        <div class="quisuisje-intro">
+          <p>Pendant 17 ans, j'ai exercé le métier de professeure des écoles. J'ai accompagné des centaines d'enfants, partagé leurs découvertes, leurs réussites, leurs peurs et parfois leurs souffrances.</p>
+          <p>Au fil des années, j'ai été particulièrement touchée par certains enfants : ceux qui débordent, ceux qui s'agitent, ceux qui pleurent facilement… Ces enfants que l'on peut parfois trouver "trop sensibles". Pourtant, ce sont souvent eux que je trouvais les plus authentiques.</p>
+          <p>C'est ce chemin qui m'a amenée à me former à différentes approches de bien-être et d'accompagnement émotionnel, puis à créer <em>L'énergie Fée</em>.</p>
+        </div>
+        <blockquote class="quisuisje-quote">
+          "Mon approche est avant tout humaine. Je ne cherche pas à réparer les personnes. Je crois profondément que chacun porte en lui ses propres ressources."
+        </blockquote>
+        <p class="quisuisje-closing">Si j'ai choisi le nom <em>L'énergie Fée</em>, c'est comme une invitation à retrouver cette petite lumière que nous portons tous en nous, même lorsque nous avons parfois l'impression qu'elle s'est éteinte.</p>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1.2rem;text-decoration:none" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Me contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer" role="contentinfo">
   <img src="logo_fee_transparent.png" alt="L'énergie Fée" class="footer-logo">
   <div class="footer-tagline">Douceur · Écoute · Bienveillance</div>
@@ -1008,6 +1284,7 @@
     <a href="#tarifs">Tarifs</a>
     <a href="#contact">Contact</a>
     <a href="https://www.facebook.com/feelenergie71" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://share.google/OVjhF5RV6WYAJVuW9" target="_blank" rel="noopener">Avis Google</a>
     <a href="#mentions">Mentions légales</a>
   </div>
   <div class="footer-copy">© 2025 Nadège Pina · L'énergie Fée · Marcilly-lès-Buxy</div>
