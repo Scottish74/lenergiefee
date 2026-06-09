@@ -424,19 +424,28 @@
       border-radius: var(--radius);
       padding: 1.8rem 1.4rem;
       text-align: center;
-      transition: transform 0.25s, box-shadow 0.25s;
+      align-items: center;
+      box-shadow: 0 6px 14px -2px rgba(60, 52, 137, 0.22);
+      transition: transform 0.25s;
       cursor: default;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
     }
 
     .service-icon {
       display: flex;
       justify-content: center;
-      margin-bottom: 0.8rem;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .service-icon svg {
+      width: 52px;
+      height: 52px;
+      display: block;
+      margin: 0 auto;
     }
 
     .service-title {
@@ -935,70 +944,51 @@
       margin-top: 2px;
     }
 
+
     /* ── SOINS À DISTANCE ── */
     .distance-section {
       padding: 4.5rem 1.5rem;
       background: var(--white);
     }
-
-    .distance-inner {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 3.5rem;
-      align-items: start;
-      max-width: 1000px;
-      margin: 0 auto;
+    .distance-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
     }
-
-    .distance-text h2 {
+    .distance-header h2 {
       font-size: clamp(28px, 4vw, 40px);
       color: var(--text-dark);
-      margin-bottom: 1.5rem;
+      font-weight: 300;
     }
-
-    .distance-text h2 em {
-      color: var(--purple);
-      font-style: italic;
+    .distance-header h2 em { color: var(--purple); font-style: italic; }
+    .distance-inner {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
-
     .distance-intro {
       font-size: 15px;
       color: var(--text-dark);
       line-height: 1.85;
       margin-bottom: 1rem;
-      font-weight: 400;
     }
-
     .distance-body {
       font-size: 14px;
       color: var(--text-soft);
       line-height: 1.8;
       margin-bottom: 0.8rem;
     }
-
-    .distance-details {
-      margin: 1.5rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
     .distance-detail-item {
       display: flex;
       align-items: baseline;
       gap: 10px;
       font-size: 14px;
       color: var(--text-dark);
+      margin: 1rem 0;
     }
-
-    .distance-detail-icon {
-      color: var(--purple);
-      font-size: 10px;
-      flex-shrink: 0;
-    }
-
-    .distance-detail-item strong { color: var(--purple-dark); }
-
+    .distance-detail-icon { color: var(--purple); font-size: 10px; flex-shrink: 0; }
     .distance-forfait {
       background: var(--purple-light);
       border-left: 3px solid var(--purple-soft);
@@ -1010,39 +1000,30 @@
       margin-bottom: 1rem;
       font-style: italic;
     }
-
     .distance-payment {
       font-size: 12px;
       color: var(--text-muted);
       font-style: italic;
     }
-
     .distance-visual {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      position: sticky;
-      top: 90px;
+      gap: 1.2rem;
     }
-
     .distance-card {
       background: var(--purple-light);
       border: 1px solid var(--purple-soft);
       border-radius: var(--radius);
-      padding: 1.8rem 1.5rem;
+      padding: 1.8rem 1.4rem;
       text-align: center;
       position: relative;
+      box-shadow: 0 6px 14px -2px rgba(60,52,137,0.18);
     }
-
     .distance-card-highlight {
       background: var(--purple);
       border-color: var(--purple);
-      color: #fff;
     }
-
-    .distance-card-highlight h3,
-    .distance-card-highlight p { color: rgba(255,255,255,0.85); }
-
+    .distance-card-highlight h3 { color: #fff; }
     .distance-card-badge {
       position: absolute;
       top: -12px;
@@ -1054,76 +1035,40 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 3px 12px;
+      padding: 3px 14px;
       border-radius: var(--radius-pill);
     }
-
-    .distance-card-icon {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 0.8rem;
-    }
-
+    .distance-card-icon { display: flex; justify-content: center; margin-bottom: 0.8rem; }
     .distance-card h3 {
       font-family: "Cormorant Garamond", serif;
-      font-size: 20px;
+      font-size: 19px;
       color: var(--purple-dark);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
+      font-weight: 400;
     }
-
     .distance-price {
       font-family: "Cormorant Garamond", serif;
-      font-size: 42px;
+      font-size: 44px;
       font-weight: 300;
       color: var(--purple-dark);
-      line-height: 1;
-      margin-bottom: 0.3rem;
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
     }
-
     .distance-card-highlight .distance-price { color: #fff; }
-    .distance-card-highlight h3 { color: #fff; }
-
-    .distance-price span { font-size: 20px; }
-
-    .distance-card p {
-      font-size: 12px;
-      color: var(--text-soft);
-    }
+    .distance-price span { font-size: 22px; }
+    .distance-card-sub { font-size: 12px; color: var(--text-soft); margin-top: 0.3rem; }
+    .distance-card-highlight .distance-card-sub { color: rgba(255,255,255,0.75); }
+    .distance-card-pay { font-size: 11px; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
 
     @media (max-width: 768px) {
-      .distance-inner {
-        grid-template-columns: 1fr;
-      }
-      .distance-visual {
-        position: static;
-        flex-direction: row;
-      }
+      .distance-inner { grid-template-columns: 1fr; }
+      .distance-visual { flex-direction: row; }
       .distance-card { flex: 1; }
     }
-
     @media (max-width: 480px) {
       .distance-visual { flex-direction: column; }
     }
 
-
-    .footer-tel {
-      display: inline-block;
-      color: var(--purple-mid);
-      font-size: 15px;
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.8rem;
-      transition: color 0.2s;
-    }
-    .footer-tel:hover { color: #fff; }
-    .footer-mention {
-      font-size: 10px;
-      opacity: 0.4;
-      max-width: 500px;
-      margin: 0.6rem auto 0;
-      line-height: 1.6;
-      font-style: italic;
-    }
 
     /* ── CTA BAND ── */
     .cta-band {
@@ -1372,6 +1317,20 @@
       animation: star-spin 3s linear infinite;
       transform-origin: 85px 158px;
     }
+
+    .star-canvas-section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .public { position: relative; overflow: hidden; }
+    .public > *:not(.star-canvas-section) { position: relative; z-index: 1; }
+    .footer { position: relative; overflow: hidden; }
+    .footer > *:not(.star-canvas-section) { position: relative; z-index: 1; }
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -1496,32 +1455,32 @@
     </div>
     <div class="services-grid">
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><path d="M36 24c0 6.627-5.373 12-12 12S12 30.627 12 24c0-3.5 1.5-6.65 3.9-8.85" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M24 12c1.5 0 3 .28 4.35.78" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><path d="M24 6 L25.2 9.6 L29 9.6 L26 11.8 L27.2 15.4 L24 13.2 L20.8 15.4 L22 11.8 L19 9.6 L22.8 9.6 Z" fill="#7F77DD" opacity="0.7"/><circle cx="36" cy="10" r="1.5" fill="#AFA9EC"/><circle cx="12" cy="14" r="1" fill="#AFA9EC"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M36 24c0 6.627-5.373 12-12 12S12 30.627 12 24c0-3.5 1.5-6.65 3.9-8.85" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M24 12c1.5 0 3 .28 4.35.78" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><path d="M24 6 L25.2 9.6 L29 9.6 L26 11.8 L27.2 15.4 L24 13.2 L20.8 15.4 L22 11.8 L19 9.6 L22.8 9.6 Z" fill="#7F77DD" opacity="0.7"/><circle cx="36" cy="10" r="1.5" fill="#AFA9EC"/><circle cx="12" cy="14" r="1" fill="#AFA9EC"/></svg></span>
         <h3 class="service-title">Massage métamorphique<br><small>pour enfants</small></h3>
         <p class="service-desc">Massage très doux des pieds, des mains et de la tête permettant à l'enfant de relâcher certaines tensions et de retrouver plus de calme intérieur.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><path d="M24 38 C24 38 12 30 12 20 C12 14.477 17.373 10 24 10 C30.627 10 36 14.477 36 20 C36 30 24 38 24 38Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><circle cx="24" cy="25" r="2" fill="#7F77DD"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M24 38 C24 38 12 30 12 20 C12 14.477 17.373 10 24 10 C30.627 10 36 14.477 36 20 C36 30 24 38 24 38Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/><circle cx="24" cy="25" r="2" fill="#7F77DD"/></svg></span>
         <h3 class="service-title">Accompagnement<br><small>des enfants sensibles</small></h3>
         <p class="service-desc">Accompagnement des enfants qui ressentent fortement leurs émotions (hypersensibilité, anxiété, difficultés d'endormissement) pour retrouver sécurité intérieure et confiance.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="#7F77DD" stroke-width="1.8"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><line x1="24" y1="8" x2="24" y2="11" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="37" x2="24" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="24" x2="11" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="37" y1="24" x2="40" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="13" y1="13" x2="15.1" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="32.9" y1="32.9" x2="35" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="35" y1="13" x2="32.9" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="15.1" y1="32.9" x2="13" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="#7F77DD" stroke-width="1.8"/><circle cx="24" cy="24" r="4" fill="#CECBF6"/><line x1="24" y1="8" x2="24" y2="11" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="37" x2="24" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="24" x2="11" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="37" y1="24" x2="40" y2="24" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><line x1="13" y1="13" x2="15.1" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="32.9" y1="32.9" x2="35" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="35" y1="13" x2="32.9" y2="15.1" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/><line x1="15.1" y1="32.9" x2="13" y2="35" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         <h3 class="service-title">Séance Reiki</h3>
         <p class="service-desc">Soin énergétique favorisant détente profonde, relâchement du stress et harmonisation du corps et des émotions.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="12" r="3.5" stroke="#7F77DD" stroke-width="1.8"/><line x1="24" y1="15.5" x2="24" y2="22" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="16" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="32" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="13" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><circle cx="35" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><line x1="24" y1="22" x2="24" y2="31" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="12" r="3.5" stroke="#7F77DD" stroke-width="1.8"/><line x1="24" y1="15.5" x2="24" y2="22" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="16" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="22" x2="32" y2="30" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><circle cx="13" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><circle cx="35" cy="33" r="3" stroke="#AFA9EC" stroke-width="1.5"/><line x1="24" y1="22" x2="24" y2="31" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></span>
         <h3 class="service-title">Psychogénéalogie</h3>
         <p class="service-desc">Accompagnement permettant d'explorer les liens entre l'histoire familiale et certaines difficultés émotionnelles ou schémas répétitifs.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><path d="M8 24 Q14 16 20 24 Q26 32 32 24 Q38 16 44 24" stroke="#7F77DD" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8 32 Q14 24 20 32 Q26 40 32 32 Q38 24 44 32" stroke="#AFA9EC" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="14" r="2" fill="#CECBF6"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M8 24 Q14 16 20 24 Q26 32 32 24 Q38 16 44 24" stroke="#7F77DD" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8 32 Q14 24 20 32 Q26 40 32 32 Q38 24 44 32" stroke="#AFA9EC" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="14" r="2" fill="#CECBF6"/></svg></span>
         <h3 class="service-title">Stress &amp; anxiété<br><small>adolescents et adultes</small></h3>
         <p class="service-desc">Accompagnement visant à apaiser le stress et les tensions émotionnelles grâce à une approche douce qui passe par le corps — massage métamorphique et soins énergétiques.</p>
       </article>
       <article class="service-card reveal">
-        <span class="service-icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="13" r="5" stroke="#7F77DD" stroke-width="1.8"/><path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="40" x2="28" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><path d="M30 30 Q36 28 38 34" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>
+        <span class="service-icon" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="13" r="5" stroke="#7F77DD" stroke-width="1.8"/><path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="40" x2="28" y2="40" stroke="#AFA9EC" stroke-width="1.8" stroke-linecap="round"/><path d="M30 30 Q36 28 38 34" stroke="#CECBF6" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>
         <h3 class="service-title">Massage métamorphique<br><small>pour séniors</small></h3>
         <p class="service-desc">Massage très doux favorisant détente, apaisement et bien-être. Présence, douceur et réconfort dans le respect du rythme de chacun. Intervention à domicile et en EHPAD.</p>
       </article>
@@ -1533,6 +1492,7 @@
 
 <!-- POUR QUI -->
 <section class="public" id="pour-qui" aria-labelledby="public-title">
+  <canvas id="starCanvasPublic" class="star-canvas-section" aria-hidden="true"></canvas>
   <div class="container">
     <div class="public-header reveal">
       <span class="section-label">Pour qui ?</span>
@@ -1544,7 +1504,7 @@
       <div class="public-card"><div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M14 38c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="public-name">Adolescents</div><div class="public-detail">stress, émotions</div></div>
       <div class="public-card"><div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M13 38c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="public-name">Adultes</div><div class="public-detail">accompagnement sur-mesure</div></div>
       <div class="public-card"><div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="22" cy="11" r="5" stroke="#7F77DD" stroke-width="1.8"/><path d="M16 22 Q14 30 16 36 Q20 42 26 40 Q34 38 34 30 Q34 22 28 20 Q24 18 16 22Z" stroke="#7F77DD" stroke-width="1.8" fill="#EEEDFE"/></svg></div><div class="public-name">Femmes enceintes</div><div class="public-detail">douceur &amp; présence</div></div>
-      <div class="public-card"><div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M13 38c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M30 28 Q38 26 38 34" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></div><div class="public-name">Séniors</div><div class="public-detail">domicile &amp; EHPAD</div></div>
+      <div class="public-card"><div class="public-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="5.5" stroke="#7F77DD" stroke-width="1.8"/><path d="M13 38c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#7F77DD" stroke-width="1.8" stroke-linecap="round"/><path d="M30 28 Q38 26 38 34" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round" fill="none"/><line x1="36" y1="34" x2="36" y2="40" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="public-name">Séniors</div><div class="public-detail">domicile &amp; EHPAD</div></div>
     </div>
   </div>
 </section>
@@ -1639,6 +1599,7 @@
   </div>
 </div>
 
+
 <!-- TARIFS -->
 <section class="tarifs" id="tarifs" aria-labelledby="tarifs-title">
   <div class="container">
@@ -1671,18 +1632,16 @@
 <!-- SOINS À DISTANCE -->
 <section class="distance-section" id="distance" aria-labelledby="distance-title">
   <div class="container">
+    <div class="distance-header reveal">
+      <span class="section-label">Soins à distance</span>
+      <h2 id="distance-title">Un accompagnement <em>où que vous soyez</em></h2>
+    </div>
     <div class="distance-inner reveal">
       <div class="distance-text">
-        <span class="section-label">Soins à distance</span>
-        <h2 id="distance-title">Un accompagnement<br><em>où que vous soyez</em></h2>
         <p class="distance-intro">Un temps de bien-être et de rééquilibrage énergétique, réalisé à distance, pour vous accompagner dans les périodes de stress, de fatigue émotionnelle, de questionnements ou simplement lorsque vous ressentez le besoin de retrouver davantage de sérénité intérieure.</p>
         <p class="distance-body">Pendant la séance, vous êtes confortablement installé(e) chez vous, dans un endroit calme. Vous n'avez rien à faire, simplement vous autoriser ce moment pour vous.</p>
         <p class="distance-body">Chaque accompagnement est suivi d'un temps d'échange afin de partager les ressentis et de répondre à vos éventuelles questions.</p>
-        <div class="distance-details">
-          <div class="distance-detail-item"><span class="distance-detail-icon">✦</span><span>Durée : environ 45 à 60 minutes</span></div>
-          <div class="distance-detail-item"><span class="distance-detail-icon">✦</span><span>Séance individuelle : <strong>50 €</strong></span></div>
-          <div class="distance-detail-item"><span class="distance-detail-icon">✦</span><span>Forfait 3 séances : <strong>120 €</strong> <em style="font-size:12px;color:var(--text-soft)">(soit 40 €/séance)</em></span></div>
-        </div>
+        <div class="distance-detail-item"><span class="distance-detail-icon">✦</span><span>Durée : environ 45 à 60 minutes</span></div>
         <div class="distance-forfait">Parce que certaines évolutions demandent du temps et de la régularité, le forfait 3 séances permet d'inscrire l'accompagnement dans une démarche plus profonde et plus durable.</div>
         <p class="distance-payment">Règlement par virement ou Wero avant la séance.</p>
         <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1.5rem;text-decoration:none" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Réserver une séance à distance</a>
@@ -1690,17 +1649,22 @@
       <div class="distance-visual">
         <div class="distance-card">
           <div class="distance-card-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#7F77DD" stroke-width="1.8"/><path d="M24 6 C24 6 20 12 20 18 C20 22 22 24 24 24 C26 24 28 22 28 18 C28 12 24 6 24 6Z" fill="#CECBF6"/><circle cx="24" cy="24" r="3" fill="#7F77DD"/></svg>
+            <svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="#7F77DD" stroke-width="1.8"/><path d="M24 6C24 6 20 12 20 18C20 22 22 24 24 24C26 24 28 22 28 18C28 12 24 6 24 6Z" fill="#CECBF6"/><circle cx="24" cy="24" r="3" fill="#7F77DD"/></svg>
           </div>
           <h3>Séance individuelle</h3>
           <div class="distance-price">50 <span>€</span></div>
-          <p>~45 à 60 minutes</p>
+          <p class="distance-card-sub">~45 à 60 minutes</p>
+          <p class="distance-card-pay">Virement ou Wero</p>
         </div>
         <div class="distance-card distance-card-highlight">
           <div class="distance-card-badge">Recommandé</div>
+          <div class="distance-card-icon">
+            <svg width="44" height="44" viewBox="0 0 48 48" fill="none"><path d="M24 4L28 16L40 16L30 24L34 36L24 28L14 36L18 24L8 16L20 16Z" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="rgba(255,255,255,0.2)"/></svg>
+          </div>
           <h3>Forfait 3 séances</h3>
           <div class="distance-price">120 <span>€</span></div>
-          <p>soit 40 €/séance</p>
+          <p class="distance-card-sub">soit 40 €/séance</p>
+          <p class="distance-card-pay" style="color:rgba(255,255,255,0.6)">Virement ou Wero</p>
         </div>
       </div>
     </div>
@@ -1768,6 +1732,7 @@
 
 <!-- FOOTER -->
 <footer class="footer" role="contentinfo">
+  <canvas id="starCanvasFooter" class="star-canvas-section" aria-hidden="true"></canvas>
   <img src="logo_fee_transparent.png" alt="L'énergie Fée" class="footer-logo">
   <div class="footer-tagline">Douceur · Écoute · Bienveillance</div>
   <a href="tel:0675204777" class="footer-tel">06 75 20 47 77</a>
@@ -1891,7 +1856,122 @@
   animate();
 })();
 
+
+// Pluie d'étoiles — Pour qui & Footer
+function createStarRain(canvasId, colors, count) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', () => { resize(); });
+
+  class Star {
+    constructor() { this.reset(true); }
+    reset(initial) {
+      this.x = Math.random() * canvas.width;
+      this.y = initial ? Math.random() * canvas.height : -10;
+      this.size = Math.random() * 2.5 + 0.5;
+      this.speed = Math.random() * 1.0 + 0.3;
+      this.opacity = Math.random() * 0.6 + 0.2;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.drift = (Math.random() - 0.5) * 0.4;
+      this.twinkle = Math.random() * Math.PI * 2;
+      this.twinkleSpeed = Math.random() * 0.05 + 0.02;
+      this.type = Math.random() > 0.7 ? 'star' : 'dot';
+    }
+    drawStar(cx, cy, r, opacity) {
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      for (let i = 0; i < 5; i++) {
+        const outerAngle = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+        const innerAngle = outerAngle + (2 * Math.PI) / 10;
+        if (i === 0) ctx.moveTo(cx + r * Math.cos(outerAngle), cy + r * Math.sin(outerAngle));
+        else ctx.lineTo(cx + r * Math.cos(outerAngle), cy + r * Math.sin(outerAngle));
+        ctx.lineTo(cx + (r * 0.4) * Math.cos(innerAngle), cy + (r * 0.4) * Math.sin(innerAngle));
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+    update() {
+      this.y += this.speed;
+      this.x += this.drift;
+      this.twinkle += this.twinkleSpeed;
+      const op = this.opacity * (0.6 + 0.4 * Math.sin(this.twinkle));
+      if (this.type === 'star') {
+        this.drawStar(this.x, this.y, this.size * 2, op);
+      } else {
+        ctx.save();
+        ctx.globalAlpha = op;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      if (this.y > canvas.height + 10) this.reset(false);
+    }
+  }
+
+  const stars = Array.from({length: count}, () => new Star());
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => s.update());
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// Pour qui — tons violets
+createStarRain('starCanvasPublic', ['#CECBF6','#AFA9EC','#7F77DD','#EAE8FD','#fff'], 50);
+// Footer — tons plus lumineux sur fond sombre
+createStarRain('starCanvasFooter', ['#CECBF6','#AFA9EC','rgba(255,255,255,0.6)','#EAE8FD','rgba(255,255,255,0.3)'], 60);
+
 </script>
 
 </body>
-</html>
+</html
+
+    /* ── POUR QUI ── */
+    .public {
+      padding: 3.5rem 1.5rem;
+      background: var(--purple-light);
+      border-top: 1px solid var(--purple-soft);
+      border-bottom: 1px solid var(--purple-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .public > *:not(.star-canvas-section) { position: relative; z-index: 1; }
+    .public-header { text-align: center; margin-bottom: 2rem; }
+    .public-header h2 { font-size: clamp(26px, 4vw, 38px); color: var(--text-dark); }
+    .public-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .public-card {
+      background: var(--white);
+      border: 1px solid var(--purple-soft);
+      border-radius: var(--radius);
+      padding: 1.3rem 1rem;
+      text-align: center;
+      box-shadow: 0 6px 14px -2px rgba(60, 52, 137, 0.26);
+      transition: transform 0.2s;
+    }
+    .public-card:hover {
+      transform: translateY(-2px);
+    }
+    .public-icon { display: flex; justify-content: center; margin-bottom: 0.7rem; }
+    .public-name { font-size: 13px; color: var(--purple-dark); font-weight: 500; line-height: 1.4; }
+    .public-detail { font-size: 11px; color: var(--text-soft); margin-top: 4px; line-height: 1.4; }
+
+>
