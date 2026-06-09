@@ -1208,6 +1208,170 @@
       .cta-band-actions { justify-content: center; }
     }
 
+
+    .nav-fb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      color: var(--purple);
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .nav-fb:hover {
+      background: var(--purple);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* ── FAIRY ILLUSTRATION ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /*.hero-fairy-illustration {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 280px;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    */.fairy-svg {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Animations */
+    .fairy-body {
+      animation: fairy-float 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .fairy-wings {
+      animation: wings-flutter 0.8s ease-in-out infinite alternate;
+      transform-origin: 160px 200px;
+    }
+
+    .moon {
+      animation: moon-pulse 6s ease-in-out infinite;
+    }
+
+    .wand-star {
+      animation: star-spin 3s linear infinite;
+      transform-origin: 85px 158px;
+    }
+
+    .sparkle-1 { animation: sparkle 2s ease-in-out infinite; }
+    .sparkle-2 { animation: sparkle 2.5s ease-in-out infinite 0.5s; }
+    .sparkle-3 { animation: sparkle 1.8s ease-in-out infinite 1s; }
+    .sparkle-4 { animation: sparkle 2.2s ease-in-out infinite 0.3s; }
+
+    .dot-1 { animation: twinkle-dot 2s ease-in-out infinite; }
+    .dot-2 { animation: twinkle-dot 3s ease-in-out infinite 0.7s; }
+    .dot-3 { animation: twinkle-dot 2.5s ease-in-out infinite 1.2s; }
+    .dot-4 { animation: twinkle-dot 1.8s ease-in-out infinite 0.4s; }
+
+    .magic-trail circle:nth-child(1) { animation: trail 2s ease-in-out infinite; }
+    .magic-trail circle:nth-child(2) { animation: trail 2s ease-in-out infinite 0.2s; }
+    .magic-trail circle:nth-child(3) { animation: trail 2s ease-in-out infinite 0.4s; }
+    .magic-trail circle:nth-child(4) { animation: trail 2s ease-in-out infinite 0.6s; }
+    .magic-trail circle:nth-child(5) { animation: trail 2s ease-in-out infinite 0.8s; }
+
+    @keyframes fairy-float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes wings-flutter {
+      0% { transform: scaleX(1); }
+      100% { transform: scaleX(1.06); }
+    }
+
+    @keyframes moon-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes star-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes twinkle-dot {
+      0%, 100% { opacity: 0.3; r: 2; }
+      50% { opacity: 1; r: 4; }
+    }
+
+    @keyframes trail {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.8; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-fairy-illustration {
+        width: 160px;
+        opacity: 0.35;
+        right: 0;
+        top: 10%;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-fairy-illustration { display: none; }
+    }
+
+
+    .star-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero > *:not(.star-canvas) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .quisuisje-fairy {
+      width: 140px;
+      margin: 1rem auto 0;
+      opacity: 0.75;
+    }
+    .fairy-mini {
+      width: 100%;
+      height: auto;
+    }
+    .fairy-body2 {
+      animation: fairy-float 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .fairy-wings2 {
+      animation: wings-flutter 0.8s ease-in-out infinite alternate;
+      transform-origin: 160px 200px;
+    }
+    .moon2 {
+      animation: moon-pulse 6s ease-in-out infinite;
+    }
+    .wand-star2 {
+      animation: star-spin 3s linear infinite;
+      transform-origin: 85px 158px;
+    }
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -1273,6 +1437,11 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <a href="https://www.facebook.com/feelenergie71" target="_blank" rel="noopener" class="nav-fb" aria-label="Page Facebook L'énergie Fée">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    </a>
     <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       Prendre rendez-vous
     </button>
@@ -1286,6 +1455,9 @@
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
+
+<canvas id="starCanvas" class="star-canvas" aria-hidden="true"></canvas>
+
   <img src="logo_fee_transparent.png" alt="" class="hero-logo" aria-hidden="true">
   <span class="hero-tag">Bien-être &amp; accompagnement émotionnel</span>
   <h1 id="hero-title">Retrouver<br><em>douceur &amp; sérénité</em></h1>
@@ -1302,6 +1474,7 @@
     <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Prendre rendez-vous</button>
     <button class="btn-outline" onclick="document.getElementById('soins').scrollIntoView({behavior:'smooth'})">Découvrir les soins</button>
   </div>
+
 </section>
 
 <!-- CITATION -->
@@ -1386,6 +1559,51 @@
           <span>Douceur</span>
           <span>Écoute</span>
           <span>Bienveillance</span>
+        </div>
+        <div class="quisuisje-fairy" aria-hidden="true">
+          <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" class="fairy-mini">
+            <radialGradient id="glow2" cx="50%" cy="55%" r="45%">
+              <stop offset="0%" stop-color="#CECBF6" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#EEEDFE" stop-opacity="0"/>
+            </radialGradient>
+            <ellipse cx="160" cy="210" rx="130" ry="140" fill="url(#glow2)"/>
+            <g class="moon2">
+              <path d="M95 195 Q160 120 225 195 Q195 265 160 275 Q125 265 95 195Z" fill="#EEEDFE" opacity="0.5"/>
+              <path d="M80 200 Q160 110 240 200 Q200 280 160 290 Q120 280 80 200Z" fill="none" stroke="#AFA9EC" stroke-width="2" opacity="0.5"/>
+            </g>
+            <g class="fairy-body2">
+              <path d="M145 195 Q130 230 125 265 Q160 275 195 265 Q190 230 175 195 Q160 188 145 195Z" fill="#7F77DD" opacity="0.85"/>
+              <path d="M150 200 Q140 235 138 260 Q155 268 160 265 Q155 235 152 200Z" fill="#AFA9EC" opacity="0.4"/>
+              <circle cx="160" cy="175" r="22" fill="#7F77DD" opacity="0.9"/>
+              <circle cx="160" cy="173" r="18" fill="#EEEDFE" opacity="0.3"/>
+              <path d="M140 165 Q135 150 145 140 Q160 132 175 140 Q185 150 180 165" fill="#534AB7" opacity="0.8"/>
+              <path d="M138 168 Q128 160 132 148 Q138 138 145 140" fill="#534AB7" opacity="0.6"/>
+              <path d="M145 205 Q120 195 105 180 Q110 172 118 175 Q130 188 148 198" fill="#7F77DD" opacity="0.7"/>
+              <line x1="105" y1="180" x2="85" y2="158" stroke="#AFA9EC" stroke-width="2" stroke-linecap="round"/>
+              <g class="wand-star2">
+                <polygon points="85,148 87,155 94,155 88,160 90,167 85,162 80,167 82,160 76,155 83,155" fill="#CECBF6" opacity="0.9"/>
+              </g>
+            </g>
+            <g class="fairy-wings2" opacity="0.7">
+              <path d="M148 195 Q100 155 95 120 Q115 115 140 150 Q148 170 148 195Z" fill="#CECBF6" opacity="0.6"/>
+              <path d="M148 195 Q100 155 95 120 Q115 115 140 150 Q148 170 148 195Z" fill="none" stroke="#AFA9EC" stroke-width="1.5"/>
+              <path d="M148 210 Q95 220 88 248 Q110 258 140 235 Q148 222 148 210Z" fill="#CECBF6" opacity="0.5"/>
+              <path d="M148 210 Q95 220 88 248 Q110 258 140 235 Q148 222 148 210Z" fill="none" stroke="#AFA9EC" stroke-width="1.5"/>
+              <path d="M172 195 Q220 155 225 120 Q205 115 180 150 Q172 170 172 195Z" fill="#CECBF6" opacity="0.6"/>
+              <path d="M172 195 Q220 155 225 120 Q205 115 180 150 Q172 170 172 195Z" fill="none" stroke="#AFA9EC" stroke-width="1.5"/>
+              <path d="M172 210 Q225 220 232 248 Q210 258 180 235 Q172 222 172 210Z" fill="#CECBF6" opacity="0.5"/>
+              <path d="M172 210 Q225 220 232 248 Q210 258 180 235 Q172 222 172 210Z" fill="none" stroke="#AFA9EC" stroke-width="1.5"/>
+            </g>
+            <path d="M148 265 Q144 285 140 300" stroke="#7F77DD" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+            <path d="M172 265 Q176 285 180 300" stroke="#7F77DD" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+            <g>
+              <circle cx="78" cy="145" r="3" fill="#CECBF6" opacity="0.7"/>
+              <circle cx="68" cy="135" r="2" fill="#AFA9EC" opacity="0.6"/>
+              <circle cx="60" cy="122" r="2.5" fill="#CECBF6" opacity="0.8"/>
+              <circle cx="240" cy="150" r="2" fill="#AFA9EC" opacity="0.6"/>
+              <circle cx="250" cy="130" r="1.5" fill="#CECBF6" opacity="0.7"/>
+            </g>
+          </svg>
         </div>
       </div>
       <div class="quisuisje-text">
@@ -1597,6 +1815,82 @@
   }, { threshold: 0.12 });
 
   reveals.forEach(el => observer.observe(el));
+
+// Pluie d'étoiles
+(function() {
+  const canvas = document.getElementById('starCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = ['#CECBF6', '#AFA9EC', '#7F77DD', '#EAE8FD', '#fff'];
+
+  class Star {
+    constructor() { this.reset(true); }
+    reset(initial = false) {
+      this.x = Math.random() * canvas.width;
+      this.y = initial ? Math.random() * canvas.height : -10;
+      this.size = Math.random() * 2.5 + 0.5;
+      this.speed = Math.random() * 1.2 + 0.3;
+      this.opacity = Math.random() * 0.7 + 0.3;
+      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      this.drift = (Math.random() - 0.5) * 0.4;
+      this.twinkle = Math.random() * Math.PI * 2;
+      this.twinkleSpeed = Math.random() * 0.05 + 0.02;
+      this.type = Math.random() > 0.7 ? 'star' : 'dot';
+    }
+    drawStar(cx, cy, r, opacity) {
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      for (let i = 0; i < 5; i++) {
+        const outerAngle = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+        const innerAngle = outerAngle + (2 * Math.PI) / 10;
+        if (i === 0) ctx.moveTo(cx + r * Math.cos(outerAngle), cy + r * Math.sin(outerAngle));
+        else ctx.lineTo(cx + r * Math.cos(outerAngle), cy + r * Math.sin(outerAngle));
+        ctx.lineTo(cx + (r * 0.4) * Math.cos(innerAngle), cy + (r * 0.4) * Math.sin(innerAngle));
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+    update() {
+      this.y += this.speed;
+      this.x += this.drift;
+      this.twinkle += this.twinkleSpeed;
+      const twinkleOpacity = this.opacity * (0.6 + 0.4 * Math.sin(this.twinkle));
+      if (this.type === 'star') {
+        this.drawStar(this.x, this.y, this.size * 2, twinkleOpacity);
+      } else {
+        ctx.save();
+        ctx.globalAlpha = twinkleOpacity;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      if (this.y > canvas.height + 10) this.reset();
+    }
+  }
+
+  const stars = Array.from({length: 80}, () => new Star());
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => s.update());
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
 </script>
 
 </body>
