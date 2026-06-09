@@ -1331,6 +1331,26 @@
     .public > *:not(.star-canvas-section) { position: relative; z-index: 1; }
     .footer { position: relative; overflow: hidden; }
     .footer > *:not(.star-canvas-section) { position: relative; z-index: 1; }
+
+    /* ── ANIMATION HERO TEXT ── */
+    .hero-animated-text {
+      display: inline-block;
+      opacity: 0;
+      animation: fadeSlideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(4px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -1453,7 +1473,7 @@
 
   <img src="logo_fee_transparent.png" alt="" class="hero-logo" aria-hidden="true">
   <span class="hero-tag">Bien-être &amp; accompagnement émotionnel</span>
-  <h1 id="hero-title">Retrouver<br><em>douceur &amp; sérénité</em></h1>
+  <h1 id="hero-title">Retrouver<br><em class="hero-animated-text">douceur &amp; sérénité</em></h1>
   <p class="hero-sub">Praticienne en bien-être et accompagnement émotionnel</p>
   <p class="hero-name">Nadège Pina</p>
   <div class="hero-chips">
