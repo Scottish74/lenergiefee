@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Massage Métamorphique entre Femmes — L'énergie Fée</title>
+  <meta name="description" content="Atelier massage métamorphique entre femmes. Samedi 27 juin, 10h-12h, dans mon jardin à Marcilly-lès-Buxy. Nadège Pina — L'énergie Fée.">
+  <meta property="og:title" content="Atelier Massage Métamorphique entre Femmes">
+  <meta property="og:description" content="Un temps doux et bienveillant pour se reconnecter à soi. Samedi 27 juin · 10h-12h · Marcilly-lès-Buxy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenergiefee.fr/atelier-femmes.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #7F77DD;
+      --purple-dark: #3C3489;
+      --purple-deep: #26215C;
+      --purple-light: #EEEDFE;
+      --purple-soft: #CECBF6;
+      --pink: #D4537E;
+      --pink-light: #FBEAF0;
+      --pink-soft: #F4C0D1;
+      --gold: #BA7517;
+      --text-dark: #26215C;
+      --text-soft: #6b6890;
+      --text-muted: #9896b0;
+      --white: #ffffff;
+      --bg: #faf9ff;
+      --radius: 12px;
+      --radius-pill: 50px;
+    }
+    body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--text-dark); font-size: 16px; line-height: 1.7; font-weight: 400; }
+    a { color: inherit; text-decoration: none; }
+
+    .nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--purple-soft); padding: 0 1.5rem; position: sticky; top: 0; z-index: 10; }
+    .nav-inner { max-width: 900px; margin: 0 auto; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-back { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-soft); transition: color 0.2s; }
+    .nav-back:hover { color: var(--purple); }
+
+    .hero { background: linear-gradient(145deg, #FBEAF0 0%, #EEEDFE 60%, #faf9ff 100%); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: '✦'; position: absolute; top: 1.5rem; left: 8%; color: var(--purple-soft); font-size: 12px; animation: twinkle 3s infinite; }
+    .hero::after { content: '✦ ✦'; position: absolute; bottom: 2rem; right: 8%; color: var(--purple-soft); font-size: 10px; letter-spacing: 0.4em; animation: twinkle 4s infinite 1s; }
+    @keyframes twinkle { 0%,100%{opacity:0.3} 50%{opacity:1} }
+    .hero-eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1rem; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 6vw, 56px); font-weight: 300; color: var(--text-dark); line-height: 1.15; margin-bottom: 0.4rem; }
+    .hero h1 em { color: var(--pink); font-style: italic; }
+    .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--purple); font-style: italic; margin-bottom: 2rem; }
+    .hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 2rem; }
+    .chip { display: flex; align-items: center; gap: 6px; background: var(--white); border: 1px solid var(--purple-soft); border-radius: var(--radius-pill); padding: 7px 16px; font-size: 13px; color: var(--text-dark); }
+    .chip svg { color: var(--purple); flex-shrink: 0; }
+    .hero-cta { display: inline-block; background: var(--pink); color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 400; padding: 13px 32px; border-radius: var(--radius-pill); transition: background 0.2s, transform 0.15s; }
+    .hero-cta:hover { background: #b83d68; transform: translateY(-1px); }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 3rem 1.5rem; }
+    .section + .section { border-top: 1px solid var(--purple-light); }
+    .section-label { display: block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.5rem; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3.5vw, 34px); font-weight: 300; color: var(--text-dark); margin-bottom: 1.2rem; }
+    .section p { font-size: 15px; color: var(--text-soft); line-height: 1.85; margin-bottom: 1rem; }
+
+    .citation-block { background: var(--pink-light); border-left: 3px solid var(--pink); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--text-dark); line-height: 1.7; }
+
+    .programme-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 1.2rem; }
+    .programme-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text-dark); line-height: 1.6; }
+    .programme-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--pink-light); border: 1.5px solid var(--pink-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .programme-dot svg { color: var(--pink); }
+
+    .objectif-box { background: linear-gradient(135deg, var(--pink-light), var(--purple-light)); border-radius: var(--radius); padding: 1.8rem; margin-top: 1.5rem; text-align: center; }
+    .objectif-box p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--text-dark); line-height: 1.75; margin: 0; }
+
+    .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+    .info-card { background: var(--white); border: 1px solid var(--purple-soft); border-radius: var(--radius); padding: 1.2rem; text-align: center; box-shadow: 0 4px 12px rgba(60,52,137,0.08); }
+    .info-card svg { color: var(--pink); margin: 0 auto 0.6rem; display: block; }
+    .info-card-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; font-weight: 500; }
+    .info-card-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--text-dark); font-weight: 400; line-height: 1.3; }
+    .info-card-sub { font-size: 12px; color: var(--text-soft); margin-top: 3px; }
+
+    .valeurs { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem; }
+    .valeur-pill { background: var(--pink-light); border: 1px solid var(--pink-soft); border-radius: var(--radius-pill); padding: 8px 18px; font-size: 13px; color: var(--pink); font-weight: 500; }
+
+    .cta-final { background: linear-gradient(145deg, #FBEAF0, #EEEDFE); border-top: 1px solid var(--pink-soft); padding: 3.5rem 1.5rem; text-align: center; }
+    .cta-final h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 300; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .cta-final h2 em { color: var(--pink); font-style: italic; }
+    .cta-final p { font-size: 14px; color: var(--text-soft); margin-bottom: 1.8rem; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--pink); color: #fff; font-family: 'Jost', sans-serif; font-size: 14px; padding: 13px 28px; border-radius: var(--radius-pill); transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: #b83d68; transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--purple); font-family: 'Jost', sans-serif; font-size: 14px; padding: 12px 28px; border-radius: var(--radius-pill); border: 1px solid var(--purple); transition: all 0.2s; }
+    .btn-outline:hover { background: var(--purple-light); transform: translateY(-1px); }
+
+    .footer { background: var(--purple-deep); color: var(--purple-light); padding: 2rem 1.5rem; text-align: center; }
+    .footer img { height: 40px; margin: 0 auto 0.6rem; filter: brightness(0) invert(1); opacity: 0.8; }
+    .footer-copy { font-size: 11px; opacity: 0.4; margin-top: 0.5rem; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 400px) { .cta-btns { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="logo_fee_transparent.png" alt="L'énergie Fée"></a>
+    <a href="/" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Retour au site
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="hero-eyebrow">Atelier · Samedi 27 juin 2026</span>
+  <h1>Massage Métamorphique<br><em>entre femmes</em></h1>
+  <p class="hero-sub">Nadège Pina — L'énergie Fée</p>
+  <div class="hero-chips">
+    <span class="chip">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Samedi 27 juin · 10h à 12h
+    </span>
+    <span class="chip">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Marcilly-lès-Buxy
+    </span>
+    <span class="chip">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Places limitées
+    </span>
+  </div>
+  <a href="index.html#contact" class="hero-cta">Réserver ma place</a>
+</section>
+
+<main>
+
+<div class="section container reveal">
+  <span class="section-label">L'atelier</span>
+  <h2>Un temps pour soi</h2>
+  <p>Un moment doux et bienveillant pour se reconnecter à soi, se libérer en profondeur et soutenir son chemin de transformation.</p>
+  <div class="citation-block">
+    Portée par la sororité et la nature, cette matinée est une invitation à poser vos bagages, à vous laisser accueillir avec douceur et à repartir plus légère.
+  </div>
+  <p>Le massage métamorphique est une technique douce pratiquée sur les pieds, les mains et la tête. Il n'agit pas sur les symptômes mais invite le corps à retrouver son propre mouvement de transformation, en douceur et en profondeur.</p>
+</div>
+
+<div class="section container reveal">
+  <span class="section-label">Au programme</span>
+  <h2>Ce que vous vivrez</h2>
+  <ul class="programme-list">
+    <li class="programme-item">
+      <div class="programme-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Une introduction au massage métamorphique et à ses bienfaits</span>
+    </li>
+    <li class="programme-item">
+      <div class="programme-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Des temps de pratique guidée entre participantes</span>
+    </li>
+    <li class="programme-item">
+      <div class="programme-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Un espace d'échange bienveillant et de partage</span>
+    </li>
+    <li class="programme-item">
+      <div class="programme-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Un moment de reconnexion à soi, dans un cadre naturel et apaisant</span>
+    </li>
+  </ul>
+  <div class="objectif-box">
+    <p>Un moment simple, hors du temps, pour se libérer en profondeur et repartir avec plus de légèreté et de sérénité.</p>
+  </div>
+</div>
+
+<div class="section container reveal">
+  <span class="section-label">Infos pratiques</span>
+  <h2>La date & le lieu</h2>
+  <div class="infos-grid">
+    <div class="info-card">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div class="info-card-label">Date</div>
+      <div class="info-card-value">Samedi<br>27 juin</div>
+    </div>
+    <div class="info-card">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="info-card-label">Horaire</div>
+      <div class="info-card-value">10h à 12h</div>
+      <div class="info-card-sub">2 heures ensemble</div>
+    </div>
+    <div class="info-card">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <div class="info-card-label">Lieu</div>
+      <div class="info-card-value">Mon jardin</div>
+      <div class="info-card-sub">Marcilly-lès-Buxy</div>
+    </div>
+    <div class="info-card">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      <div class="info-card-label">Places</div>
+      <div class="info-card-value">Limitées</div>
+      <div class="info-card-sub">Inscription recommandée</div>
+    </div>
+  </div>
+</div>
+
+<div class="section container reveal">
+  <span class="section-label">L'ambiance</span>
+  <h2>Douceur, écoute & transformation</h2>
+  <p>Un cadre intimiste, en pleine nature, où chacune peut arriver telle qu'elle est — sans performance, sans jugement. Juste un espace pour être.</p>
+  <div class="valeurs">
+    <span class="valeur-pill">Douceur</span>
+    <span class="valeur-pill">Écoute</span>
+    <span class="valeur-pill">Transformation</span>
+    <span class="valeur-pill">Sororité</span>
+    <span class="valeur-pill">Nature</span>
+  </div>
+</div>
+
+</main>
+
+<div class="cta-final">
+  <h2>Un moment pour soi,<br><em>portée par la sororité</em></h2>
+  <p>Places limitées pour préserver la qualité de l'accompagnement.<br>N'hésitez pas à en parler autour de vous !</p>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Réserver ma place</a>
+    <a href="tel:0675204777" class="btn-outline">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13.5 19.79 19.79 0 0 1 1 4.82 2 2 0 0 1 2.98 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      06 75 20 47 77
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <img src="logo_fee_transparent.png" alt="L'énergie Fée">
+  <div class="footer-copy">© 2025 Nadège Pina · L'énergie Fée · Marcilly-lès-Buxy</div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
